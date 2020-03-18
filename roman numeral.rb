@@ -1,3 +1,4 @@
+#hash of roman numerals
 @dictionary = {
   'I': 1,
   'V': 5,
@@ -10,6 +11,7 @@
 
 @user_input = ""
 
+#method to check if user input is valid
 def is_valid?
   @user_input.split('').each do |letter|
     unless @dictionary.keys.include?(letter.to_sym)
@@ -27,7 +29,7 @@ loop do
   break if is_valid?
 end
 
-
+#method to convert the string of roman numerals to a number 
 def convert_string_to_int_numbers
   @user_input.split('').map do |letter|
     @dictionary[letter.to_sym]
